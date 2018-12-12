@@ -1,0 +1,10 @@
+[
+	{ "platform": "bks", "products": 
+		[
+			{ "product": "SGS", "versions": ["V05R15", "V05R16"]},
+			{ "product": "SDT", "versions": ["V05R01", "V05R16"]}
+		]			
+	}
+]
+	 
+

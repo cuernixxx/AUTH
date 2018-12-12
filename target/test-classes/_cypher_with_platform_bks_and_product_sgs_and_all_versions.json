@@ -1,0 +1,15 @@
+[
+	{ "platform": "pwc", "products": 
+		[
+			{ "product": "*", "versions": []}
+			
+		]			
+	},
+	{ "platform": "bks", "products": 
+		[
+			{ "product": "sdt", "versions": ["*"]},
+			{ "product": "sgs", "versions": ["*"]}
+			
+		]			
+	}
+]

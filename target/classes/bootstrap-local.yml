@@ -1,0 +1,19 @@
+server:
+  port: 8090
+spring:
+  application:
+    name: config-sgs
+  profiles: local
+  cloud:
+    config:
+      failFast: true
+      enabled: true
+      uri: ${CONFIG_SGS_SERVICE.URI}
+logging:
+  file:  sgs-auht.log
+  level:
+    org.springframework.web:  DEBUG
+    com.isb.sgs: DEBUG
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
+    file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"

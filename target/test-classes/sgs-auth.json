@@ -1,0 +1,7 @@
+[
+	{ "name": "TOKEN-1", "actions": [ "*"]	},
+	{ "name": "TOKEN-2", "actions": [ "*"]	},
+	{ "name": "TOKEN-3", "actions": [ "desplegar" ]	},
+	{ "name": "TOKEN-4", "actions": [ "publicar", "desplegar" ]	}
+]
+	

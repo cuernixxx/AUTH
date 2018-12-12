@@ -1,0 +1,8 @@
+[
+	{ "platform": "pwc", "products": 
+		[
+			{ "product": "*", "versions": []}
+			
+		]			
+	}
+]

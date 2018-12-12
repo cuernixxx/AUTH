@@ -1,0 +1,66 @@
+swagger: '2.0'
+info:
+  description: Microservicio de autorización de usuarios SGS.
+  version: 1.0.0
+  title: CCSW-SGS-AUTH
+  termsOfService: 'http://swagger.io/terms/'
+  contact:
+    email: apiteam@swagger.io
+  license:
+    name: Apache 2.0
+    url: 'http://www.apache.org/licenses/LICENSE-2.0.html'
+host: petstore.swagger.io
+basePath: /v2
+tags:
+  - name: AuthorizationSGS
+    description: Servicio de autorización
+schemes:
+  - http
+paths:
+  /auth:
+    get:
+      tags:
+        - AuthorizationSGS
+      summary: Comprobacion de autorización
+      description: Metodo para comprobar la autorización en base a un token y rol
+      operationId: getAuthorization
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          description: Control de token y acción
+          required: true
+          schema:
+            $ref: '#/definitions/AuthorizationRequest'
+      responses:
+        '200':
+          description: successful operation
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/AuthorizationResponse'
+        '404':
+          description: Invalid request
+definitions:
+  AuthorizationResponse:
+    type: object
+    properties:
+      status:
+        type: boolean
+      message:
+        type: string
+      codeError:
+        type: integer
+        format: int32
+    xml:
+      name: authResponse
+  AuthorizationRequest:
+    type: object
+    properties:
+      action:
+        type: string
+      token:
+        type: string
+    xml:
+      name: authRequest

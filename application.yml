@@ -1,0 +1,18 @@
+deploy:
+  environments:
+    - name: development
+      regions:
+        - name: Boadilla West
+          type: ose3
+          properties:
+            ose3Region: api.boaw.paas.gsnetcloud.corp:8443
+            ose3Project: serenity-alm-dev
+            ose3TokenCredentialId: serenity-alm-1524143094500514080
+            ose3Application: sgs-auth-lori
+            ose3Template: javase
+            ose3TemplateParams:
+              ARTIFACT_URL: $ARTIFACT_URL
+              JAVA_OPTS_EXT: -DCONFIG_SGS_SERVICE.URI=http://config-sgs-serenity-alm-dev.appls.boaw.paas.gsnetcloud.corp
+              WILY_MOM_FQDN: oclrh70c074.isbcloud.isban.corp
+              WILY_MOM_PORT: 5001
+            ose3TemplateSecretsParams:
